@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML5 Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        /* Form Styles */
+        form {
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+        }
+        .radio-group input, .checkbox-group input {
+            width: auto;
+            margin-right: 10px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Advanced HTML5 Elements and Forms</h1>
+    </header>
+
+    <!-- Ordered List Section -->
+    <section id="list-section">
+        <h2>Roman Numeral Ordered List</h2>
+        <p>Here is an ordered list using Roman numerals:</p>
+        <ol type="I">
+            <li>Introduction to HTML5</li>
+            <li>Semantic Elements
+                <ol type="i">
+                    <li>Header</li>
+                    <li>Nav</li>
+                    <li>Section</li>
+                    <li>Article</li>
+                    <li>Footer</li>
+                </ol>
+            </li>
+            <li>Forms and Input Types</li>
+            <li>Multimedia Elements</li>
+            <li>Advanced Attributes</li>
+        </ol>
+    </section>
+
+    <!-- Image Section -->
+    <section id="image-section">
+        <h2>External Image</h2>
+        <p>Below is an image from Pexels:</p>
+        <img src="https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg" 
+             alt="Coding on a laptop - image from Pexels" 
+             title="HTML5 Coding">
+        <p>Photo credit: Pexels.com</p>
+    </section>
+
+    <!-- Table Section -->
+    <section id="table-section">
+        <h2>Contact Table</h2>
+        <table>
+            <caption>Contact Information</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Smith</td>
+                    <td>123 Main St, New York, NY</td>
+                    <td>(212) 555-1234</td>
+                    <td>john.smith@example.com</td>
+                </tr>
+                <tr>
+                    <td>Sarah Johnson</td>
+                    <td>456 Oak Ave, Los Angeles, CA</td>
+                    <td>(310) 555-5678</td>
+                    <td>sarah.j@example.com</td>
+                </tr>
+                <tr>
+                    <td>Michael Brown</td>
+                    <td>789 Pine Rd, Chicago, IL</td>
+                    <td>(312) 555-9012</td>
+                    <td>michael.b@example.com</td>
+                </tr>
+                <tr>
+                    <td>Emily Davis</td>
+                    <td>101 Maple Dr, Miami, FL</td>
+                    <td>(305) 555-3456</td>
+                    <td>emily.d@example.com</td>
+                </tr>
+                <tr>
+                    <td>Robert Wilson</td>
+                    <td>202 Cedar Ln, Seattle, WA</td>
+                    <td>(206) 555-7890</td>
+                    <td>robert.w@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form-section">
+        <h2>Registration Form</h2>
+        <form id="registration-form" action="#" method="POST">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="form-group">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" 
+                           placeholder="Create a strong password" 
+                           pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" 
+                           title="Password must contain at least 8 characters, including uppercase, lowercase letters and numbers"
+                           required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="birth-date">Date of Birth:</label>
+                    <input type="date" id="birth-date" name="birth-date" required>
+                </div>
+            </fieldset>
+            
+            <!-- Additional Information -->
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="au">Australia</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="male" required> Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female"> Female
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="other"> Other
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="prefer-not"> Prefer not to say
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Interests:</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="interests" value="technology"> Technology
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interests" value="sports"> Sports
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interests" value="music"> Music
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interests" value="art"> Art
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interests" value="travel"> Travel
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- Form Submission -->
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Multimedia Section -->
+    <section id="multimedia-section">
+        <h2>Multimedia Elements</h2>
+        
+        <!-- Audio Element -->
+        <h3>Audio Sample</h3>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- Video Element -->
+        <h3>Video Sample</h3>
+        <video width="100%" height="auto" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Advanced HTML5 Elements Demo</p>
+    </footer>
+</body>
+</html>
